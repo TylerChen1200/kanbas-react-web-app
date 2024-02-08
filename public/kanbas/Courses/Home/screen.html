@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
@@ -6,61 +7,124 @@
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet"/>
   </head>
   <body>
     <!-- Implement links to Kanbas and Course Navigation -->
     <div class="d-flex">
       <div class="d-none d-md-block">
         <ul class="wd-kanbas-navigation">
-          <body>
-            <ul class="wd-kanbas-navigation">
-              <li><a href="http://northeastern.edu">N</a></li>
-              <li><a href="/Kanbas/Account/Profile/screen.html"><i class="color-white fa-solid fa-circle-user"></i>Account</a></li>
-              <li class="wd-active">
-                <a href="/Kanbas/Dashboard/screen.html">
-                  <i class="fa fa-tachometer"></i> Dashboard</a>
-              </li>
-              <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a> </li>
-              <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
-              <li><a href="#"><i class="fa-solid fa-inbox"></i>Inbox</a></li>
-              <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
-              <li><a href="#"><i class="fa-solid fa-display"></i>Studio</a></li>
-              <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Commons</a></li>
-              <li><a href="#"><i class="fa-regular fa-circle-question"></i>Help</a></li>
-            </ul>
-          </body>
+                <li><a href="http://northeastern.edu">N</a></li>
+                <li><a href="/Kanbas/Account/Profile/screen.html"><i class="color-white fa-solid fa-circle-user"></i>Account</a></li>
+                <li class="wd-active">
+                  <a href="/Kanbas/Dashboard/screen.html">
+                    <i class="fa fa-tachometer"></i> Dashboard</a>
+                </li>
+                <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a> </li>
+                <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a href="#"><i class="fa-solid fa-inbox"></i>Inbox</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
+                <li><a href="#"><i class="fa-solid fa-display"></i>Studio</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Commons</a></li>
+                <li><a href="#"><i class="fa-regular fa-circle-question"></i>Help</a></li>
         </ul>
       </div>
       <div class="d-none d-md-block">
         <ul class="wd-navigation">
-          <body>
-            <ul class="wd-navigation">
-              <li>
-                <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-              <li class="wd-active">
-                <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
-              </li>
-              <li><a href="http://piazza.com">Piazza</a></li>
-              <li><a href="#">Zoom</a></li>
-              <li>
-                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-              </li>
-              <li><a href="#">Quizzes</a></li>
-              <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-              <li><a href="#">People</a></li>
-            </ul>
-          </body>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+          </li>
+          <li><a href="http://piazza.com">Piazza</a></li>
+          <li><a href="#">Zoom</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
         </ul>
       </div>
       <div class="flex-fill">
         <ul class="list-group wd-modules">
-          <!-- Copy Course Home here -->
+          <ul>
+            <button type="button">Collapse All</button>
+            <button type="button">View Progress</button>
+            <select id="select-one-genre">
+              <option value="TEST">Publish All</option>
+            </select>
+            <button type="button">Module</button>
+  
+            <li> Week 0 - INTRO
+              <ul>
+                <li>Learning Objectives
+                  <ul>
+                    <li>Introduction to the course</li>
+                    <li>Learn what is Web Development</li>
+                    <li>Creating a development environment</li>
+                    <li>Creating a Web Application</li>
+                    <li>Getting started with the 1st Assignments</li>
+                  </ul>
+                </li>
+                <li>READING
+                  <ul>
+                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
+                    <li>Full Stack Developer - Chapter 2 - Introduction</li>
+                  </ul>
+                </li>
+                <li>SLIDES
+                  <ul>
+                    <li><a
+                        href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0">
+                        Introduction to Web Development Links to an external site.</a></li>
+                    <li><a
+                        href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.p">
+                        Creating an HTTP server with Node.js Links to an external
+                        site.</a></li>
+                    <li><a
+                        href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
+                        Creating a React Application Links to an external site.</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li> Week 1 - HTML
+              <ul>
+                <li>Learning Objectives</li>
+              </ul>
+            </li>
+          </ul>
         </ul>
       </div>
       <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
         <h3>Course Status</h3>
-          <!-- Implement Course Status here -->
+        <button type="button">Unpublish</button>
+        <button type="button">Published</button>
+        <ul>
+          <li><a
+              href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0">
+              Import Existing Content.</a></li>
+          <li><a
+              href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.p">
+              Import From Commons.</a></li>
+          <li><a
+              href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
+              Choose Home Page.</a></li>
+          <li><a
+              href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0">
+              New Announcement.</a></li>
+          <li><a
+              href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.p">
+              New Analytics.</a></li>
+          <li><a
+              href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
+              View Course Notifications.</a></li>
+        </ul>
+        <h1>Coming Up</h1>
       </div>
     </div>
   </body>
 </html>
+
+     
