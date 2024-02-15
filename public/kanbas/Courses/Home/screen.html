@@ -16,11 +16,11 @@
         <ul class="wd-kanbas-navigation">
                 <li><a href="http://northeastern.edu">N</a></li>
                 <li><a href="/Kanbas/Account/Profile/screen.html"><i class="color-white fa-solid fa-circle-user"></i>Account</a></li>
-                <li class="wd-active">
+                <li>
                   <a href="/Kanbas/Dashboard/screen.html">
                     <i class="fa fa-tachometer"></i> Dashboard</a>
                 </li>
-                <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a> </li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a> </li>
                 <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
                 <li><a href="#"><i class="fa-solid fa-inbox"></i>Inbox</a></li>
                 <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
@@ -30,10 +30,18 @@
         </ul>
       </div>
       <div class="d-none d-md-block">
+        <div class="content-container" style="position: relative;">
+          <h1 class="top-aligned"><i class="fa-solid fa-bars"></i> Pls  Work</h1>
+        
+          <hr style="position: absolute; left: 0px; right: 0; top: 40;">
+          </div>
+
+        
         <ul class="wd-navigation">
-          <li>
-            <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          
           <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li >
             <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
           </li>
           <li><a href="http://piazza.com">Piazza</a></li>
@@ -46,56 +54,39 @@
           <li><a href="#">People</a></li>
         </ul>
       </div>
+      
       <div class="flex-fill">
         <ul class="list-group wd-modules">
-          <ul>
-            <button type="button">Collapse All</button>
-            <button type="button">View Progress</button>
-            <select id="select-one-genre">
-              <option value="TEST">Publish All</option>
-            </select>
-            <button type="button">Module</button>
-  
-            <li> Week 0 - INTRO
-              <ul>
-                <li>Learning Objectives
-                  <ul>
-                    <li>Introduction to the course</li>
-                    <li>Learn what is Web Development</li>
-                    <li>Creating a development environment</li>
-                    <li>Creating a Web Application</li>
-                    <li>Getting started with the 1st Assignments</li>
-                  </ul>
-                </li>
-                <li>READING
-                  <ul>
-                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                    <li>Full Stack Developer - Chapter 2 - Introduction</li>
-                  </ul>
-                </li>
-                <li>SLIDES
-                  <ul>
-                    <li><a
-                        href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0">
-                        Introduction to Web Development Links to an external site.</a></li>
-                    <li><a
-                        href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.p">
-                        Creating an HTTP server with Node.js Links to an external
-                        site.</a></li>
-                    <li><a
-                        href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
-                        Creating a React Application Links to an external site.</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li> Week 1 - HTML
-              <ul>
-                <li>Learning Objectives</li>
-              </ul>
-            </li>
-          </ul>
-        </ul>
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 1
+              <span class="float-end">
+                <i class="fa fa-check-circle text-success"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 2
+              <span class="float-end">
+                <i class="fa fa-check-circle text-success"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+          </li>
+        </ul>    
       </div>
       <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
         <h3>Course Status</h3>
