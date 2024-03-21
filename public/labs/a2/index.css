@@ -7,7 +7,13 @@ p#id-selector-1 {
    background-color: red;
    color: rgb(145, 145, 85);
 } */
-
+#qwe { 
+   color: blue; 
+ }
+ 
+ .asd { 
+   color: red; 
+ }
 p#id-selector-2 {
    background-color: rgb(225, 255, 0);
    color: rgb(199, 234, 25);
