@@ -13,4 +13,3 @@ function VariablesAndConstants() {
     );
  }
  export default VariablesAndConstants
-

@@ -1,62 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 .wd-kanbas-navigation {
     background-color: black;
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0px;  margin: 0px;
     width: 80px;
+    height: 100vh;
   }
-  
   .wd-kanbas-navigation li {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 0.8em;
-    text-align: center;
-    color: rgb(216, 17, 17); 
+    padding: 10px;     margin-bottom: 10px;
+    font-size: 0.8em;  text-align: center;
   }
-  
   .wd-kanbas-navigation li.wd-active {
     background-color: white;
   }
-  
   .wd-kanbas-navigation li.wd-active a {
     color: red;
   }
-  
   .wd-kanbas-navigation a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: red; 
-    text-decoration: none;  
+    color: white;
+    text-decoration: none;
   }
-  
   .wd-kanbas-navigation a i {
     color: red;
     font-size: 2em;
     margin-bottom: 5px;
   }
-  
-  .color-white {
+  .white-text {
     color: white !important;
   }
   
-  .vertical-align {
-    top: 0;
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body * {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  .top-aligned {
-    white-space: nowrap;
-  }
-  
-  .top-aligned .fa-bars {
-    margin-right: 0.5em;
-  }
-
-  .wd-kanbas-navigation li.account-label a {
-    color: white; 
-  }
-  
-
-  .wd-kanbas-navigation li.wd-active a {
-    color: red; 
-  }

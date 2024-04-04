@@ -1,14 +1,23 @@
 import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import {assignments} from "../../Database";
 function Assignments() {
   const { courseId } = useParams();
   const assignmentList = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
     <>
-      {/* <!-- Add buttons here --> */}
+      {<select id="assignment">
+          <option selected value="Edit">Edit</option>
+          <option value="SpeedGrader">Speed Grader</option>
+          <option value="Duplicate">Duplicate</option>
+          <option value="Delete">Delete</option>
+          <option value="MoveTo">Move To...</option>
+          <option value="SendTo">Send To...</option>
+          <option value="CopyTo">Copy To...</option>
+          <option value="ShareToCommons">Share To Commons</option>
+        </select>}
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>
