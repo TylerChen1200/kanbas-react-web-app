@@ -1,161 +1,59 @@
-<table>
+
+  <select id="gradebook">
+    <option selected value="gradebook">Gradebook</option>
+  </select>
+  <button>Import</button>
+  <select id="export">
+    <option selected value="Export">Gradebook</option>
+  </select>
+  <button>Config</button>
+  <h2>Student Names</h2>
+  <form>
+    <input type="text" id="student-name" name="student-name" placeholder="Search Students"/>
+  </form>
+  <h2>Assignment Names</h2>
+  <form>
+    <input type="text" id="assignment-name" name="assignment-name" placeholder="Search Assignments"/>
+  </form>
+  <button>Apply Filters</button>
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>A1</th>
+        <th>A2</th>
+        <th>A3</th>
+        <th>A4</th>
+      </tr>
+    </thead>
     <tbody>
         <tr>
-            <td>
-                <ul>
-                    <li><a href="/Kanbas/Account/Navigation/index.html">
-                            Account</a></li>
-                    <li>
-                        <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Calendar/index.html">Calendar</a></li>
-                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-                    <li><a href="/Kanbas/History/index.html">History</a></li>
-                    <li><a href="/Kanbas/Studio/index.html">Studio</a></li>
-                    <li><a href="/Kanbas/Commons/index.html">Commons</a></li>
-                    <li><a href="/Kanbas/Help/index.html">Help</a></li>
-                </ul>
-
-            </td>
-            <td>
-                <ul>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">
-                            Home</a></li>
-                    <li><a href="/Kanbas/Courses/Modules/index.html">
-                            Modules</a></li>
-                    <li><a href="/Kanbas/Courses/Piazza/index.html">
-                            Piazza</a></li>
-                    <li><a href="/Kanbas/Courses/Zoom_Meetings/index.html">
-                            Zoom Meetings</a></li>
-                    <li><a href="/Kanbas/Courses/Assignments/screen.html">
-                            Assignments</a></li>
-                    <li><a href="/Kanbas/Courses/Quizzes/index.html">
-                            Quizzes</a></li>
-                    <li><a href="/Kanbas/Courses/Grades/index.html">
-                            Grades</a></li>
-                    <li><a href="/Kanbas/Courses/People/index.html">
-                            People</a></li>
-                    <li><a href="/Kanbas/Courses/Panopto_Video/index.html">
-                            Panopto Video</a></li>
-                    <li><a href="/Kanbas/Courses/Discussions/index.html">
-                            Discussions</a></li>
-                    <li><a href="/Kanbas/Courses/Announcements/index.html">
-                            Announcements</a></li>
-                    <li><a href="/Kanbas/Courses/Pages/index.html">
-                            Pages</a></li>
-                    <li><a href="/Kanbas/Courses/Files/index.html">
-                            Files</a></li>
-                    <li><a href="/Kanbas/Courses/Rubrics/index.html">
-                            Rubrics</a></li>
-                    <li><a href="/Kanbas/Courses/Outcomes/index.html">
-                            Outcomes</a></li>
-                    <li><a href="/Kanbas/Courses/Collaborations/index.html">
-                            Collaborations</a></li>
-                    <li><a href="/Kanbas/Courses/Syllabus/index.html">
-                            Syllabus</a></li>
-                    <li><a href="/Kanbas/Courses/Settings/index.html">
-                            Settings</a></li>
-
-                </ul>
-
-            </td>
-            <td>
-                <select id="select-grade">
-                    <option value="TEST">Gradebook</option>
-                </select>
-                <button type="button">Import</button>
-                <select id="select-export">
-                    <option value="TEST">Export</option>
-                </select>
-                <button type="button">Configure</button>
-                <h2>Student Names</h2>
-                <label for="text-fields-name"> </label>
-                <input type="student-name"
-                    placeholder="Search Students"
-                    id="student-name" /><br>
-                <br>
-
-                <h2>Assignment Names</h2>
-                <label for="text-fields-name"> </label>
-                <input type="assignment-name"
-                    placeholder="Search Assignments"
-                    id="assignment-name" /><br>
-                <br>
-                <button type="button">Apply Filters</button> <br><br>
-
-                <table border="1" width="100%"><br>
-                    <thead>
-                        <tr>
-                            <th>Student Names</th>
-                            <th>A1 SETUP Out of 100</th>
-                            <th>A2 HTML Out of 100</th>
-                            <th>A3 CSS Out of 100</th>
-                            <th>A4 BOOTSTRAP Out of 100</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jacob Dogman</td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="90"
-                                    id="grade-value" /></td>
-                            <td>90</td>
-                            <td>90</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Feetman Footish</td>
-                            <td>90</td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="90"
-                                    id="grade-value" /></td>
-                            <td>85</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Levi Longlegs</td>
-                            <td>90</td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="20"
-                                    id="grade-value" /></td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="90"
-                                    id="grade-value" /></td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Larson Longfoot</td>
-                            <td>90</td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="50"
-                                    id="grade-value" /></td>
-                            <td>89</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Leggy Longfoot</td>
-                            <td>20</td>
-                            <td>90</td>
-                            <td>89</td>
-                            <td><label for="grade-value"> </label>
-                                <input type="grade-value"
-                                    placeholder="65"
-                                    id="grade-value" /></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </td>
-        </tr>
+            <td>Bob</td>
+            <td><input type="text" id="bob-A1" name="bob-A1" placeholder="15"/></td>
+            <td><input type="text" id="bob-A2" name="bob-A2" placeholder="99"/></td>
+            <td><input type="text" id="bob-A3" name="bob-A3" placeholder="23"/></td>
+            <td><input type="text" id="bob-A4" name="bob-A4" placeholder="0"/></td>
+          </tr>
+          <tr>
+            <td>Joe</td>
+            <td><input type="text" id="joe-A1" name="joe-A1" placeholder="23"/></td>
+            <td><input type="text" id="joe-A2" name="joe-A2" placeholder="10"/></td>
+            <td><input type="text" id="joe-A3" name="joe-A3" placeholder="12"/></td>
+            <td><input type="text" id="joe-A4" name="joe-A4" placeholder="0"/></td>
+          </tr>
+          <tr>
+            <td>Win</td>
+            <td><input type="text" id="win-A1" name="win-A1" placeholder="100"/></td>
+            <td><input type="text" id="win-A2" name="win-A2" placeholder="100"/></td>
+            <td><input type="text" id="win-A3" name="win-A3" placeholder="100"/></td>
+            <td><input type="text" id="win-A4" name="win-A4" placeholder="0"/></td>
+          </tr>
+          <tr>
+            <td>Bruh</td>
+            <td><input type="text" id="bruh-A1" name="bruh-A1" placeholder="0"/></td>
+            <td><input type="text" id="bruh-A2" name="bruh-A2" placeholder="0"/></td>
+            <td><input type="text" id="bruh-A3" name="bruh-A3" placeholder="0"/></td>
+            <td><input type="text" id="bruh-A4" name="bruh-A4" placeholder="0"/></td>
+          </tr>
     </tbody>
-</table>
+  </table>
