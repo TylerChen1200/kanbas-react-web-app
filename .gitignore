@@ -12,6 +12,7 @@ node_modules
 # production
 /build
 
+/kanbas-react-web-app/kanbas-node-server-app
 # misc
 .DS_Store
 .env.local
