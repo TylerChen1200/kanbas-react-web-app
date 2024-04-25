@@ -1,115 +1,96 @@
-import React, { useState, useEffect } from 'react';
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-
-function WorkingWithArrays() {
-    const [todo, setTodo] = useState({
-        id: 1,
-        title: "New Task",
-        description: "Create a NodeJS server with ExpressJS",
-        due: "2021-09-09",
-        completed: false,
-    });
-    const API = "http://localhost:4000/a5/todos";
-    const [todos, setTodos] = useState<any[]>([]);
-    const [errorMessage, setErrorMessage] = useState(null);
-    useEffect(() => {
-        fetchTodos();
-    }, []);
-
-    const fetchTodos = async () => {
-        const response = await axios.get(API);
-        setTodos(response.data);
-    };
-
-    const createTodo = async () => {
-        try {
-            const response = await axios.post(API, { title: 'Balls' }); 
-            setTodos([...todos, response.data]);
-        } catch (error) {
-            console.error(error);
-            setErrorMessage((error as any).response?.data.message);
-        }
-    };
-    const updateTodo = async () => {
-        try {
-            const response = await axios.put(`${API}/${todo.id}`, todo);
-            setTodos(todos.map(t => (t.id === todo.id ? response.data : t)));
-        } catch (error) {
-            console.error(error);
-            setErrorMessage((error as any).response?.data.message);
-        }
-    };
-    const deleteTodo = async (id: number) => {
-        try {
-            await axios.delete(`${API}/${id}`);
-            setTodos(todos.filter(t => t.id !== id));
-        } catch (error) {
-            console.error(error);
-            setErrorMessage((error as any).response?.data.message);
-        }
-    };
-
-
-    const updateDescription = () => {
-        const url = `${API}/${todo.id}/updateDescription`;
-        const data = { description: todo.description };
-        axios.put(url, data);
-    };
-
-    const updateCompleted = () => {
-        const url = `${API}/${todo.id}/updateCompleted`;
-        const data = { completed: todo.completed };
-        axios.put(url, data);
-    };
-
-    return (
-        <div>
-            <input
-                type="number"
-                value={todo.id}
-                onChange={(e) => setTodo({ ...todo, id: parseInt(e.target.value, 10) })}
-            /><br />
-            <input
-                type="text"
-                value={todo.description}
-                onChange={(e) => setTodo({ ...todo, description: e.target.value })}
-            /><br />
-            <textarea value={todo.description}
-                onChange={(e) => setTodo({ ...todo, description: e.target.value })}
-            /><br />
-            <input value={todo.due} type="date"
-                onChange={(e) => setTodo({ ...todo, due: e.target.value })}
-            /><br />
-            <label>
-                <input type="checkbox"
-                    checked={todo.completed}
-                    onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
-                />
-                Completed
-            </label><br />
-            <button onClick={createTodo} className="btn btn-primary">Create Todo</button>
-            <button onClick={() => updateTodo()} className="btn btn-success">Update Todo</button>
-            <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Delete Todo</button>
-            {errorMessage && (
-                <div className="alert alert-danger mb-2 mt-2">
-                    {errorMessage}
-                </div>
-            )}
-            <ul className="list-group">
-                {todos.map((todo) => (
-                    <li key={todo.id} className="list-group-item">
-                        <input checked={todo.completed} type="checkbox" readOnly />
-                        {todo.title}
-                        <p>{todo.description}</p>
-                        <p>{todo.due}</p>
-                        <button onClick={() => setTodo(todo)} className="btn btn-warning">Edit</button>
-                        <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Remove</button>
-                    </li>
-                ))}
-            </ul>
-        </div> 
-    );
+interface Module {
+  id: string;
+  name: string;
+  description: string;
 }
 
-export default WorkingWithArrays;
+interface Assignment {
+  id: string;
+  title: string;
+  description: string;
+  score: number;
+  completed: boolean;
+}
+
+const WorkingWithObjects: React.FC = () => {
+  const [module, setModule] = useState<Module>({ id: '1', name: 'Initial Name', description: 'Initial Description' });
+  const [newModuleName, setNewModuleName] = useState('');
+  const [newModuleDescription, setNewModuleDescription] = useState('');
+
+  const [assignment, setAssignment] = useState<Assignment>({ id: '1', title: 'NodeJS Assignment', description: 'Create a NodeJS server with ExpressJS', score: 75, completed: false });
+  const [newScore, setNewScore] = useState(assignment.score);
+
+  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
+
+  useEffect(() => {
+    const fetchModule = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/a5/module');
+        setModule(response.data);
+      } catch (error) {
+        console.error('Failed to fetch module', error);
+      }
+    };
+
+    const fetchAssignment = async () => {
+      try {
+        const response = await axios.get(`${ASSIGNMENT_URL}`);
+        setAssignment(response.data);
+      } catch (error) {
+        console.error('Failed to fetch assignment', error);
+      }
+    };
+
+    fetchModule();
+    fetchAssignment();
+  }, []);
+
+  const updateModuleDescription = async () => {
+    setModule({ ...module, description: newModuleDescription });
+  };
+
+  const updateModuleName = async () => {
+    setModule({ ...module, name: newModuleName });
+  };
+
+  const updateScore = async () => {
+    setAssignment({ ...assignment, score: newScore });
+  };
+
+  const updateTitle = async () => {
+    try {
+      const response = await axios.get(`${ASSIGNMENT_URL}/title/${assignment.title}`);
+      setAssignment(response.data);
+    } catch (error) {
+      console.error('Failed to update title', error);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Working With Objects</h2>
+      <h3>Module Details</h3>
+      <input type="text" value={newModuleName} onChange={e => setNewModuleName(e.target.value)} placeholder="New Module Name" />
+      <button onClick={updateModuleName}className="btn btn-primary">Update Module Name</button><br />
+      <input type="text" value={newModuleDescription} onChange={e => setNewModuleDescription(e.target.value)} placeholder="New Module Description" />
+      <button onClick={updateModuleDescription}className="btn btn-primary">Update Module Description</button><br />
+      <strong>Current Module Name:</strong> {module.name}<br />
+      <strong>Current Module Description:</strong> {module.description}<br />
+      
+      <h3>Assignment Details</h3>
+      <input type="text" value={assignment.title} onChange={e => setAssignment({ ...assignment, title: e.target.value })} />
+      <button onClick={updateTitle}className="btn btn-primary">Update Title to: {assignment.title}</button><br />
+      <input type="number" value={newScore} onChange={e => setNewScore(Number(e.target.value))} />
+      <button onClick={updateScore}className="btn btn-primary">Update Score</button><br />
+      <label>Completed:
+        <input type="checkbox" checked={assignment.completed} onChange={e => setAssignment({ ...assignment, completed: e.target.checked })} />
+      </label><br />
+      <button onClick={() => setAssignment({ ...assignment, completed: !assignment.completed })}className="btn btn-primary">Toggle Completed</button><br />
+    </div>
+  );
+};
+
+export default WorkingWithObjects;
