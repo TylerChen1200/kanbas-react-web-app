@@ -23,14 +23,21 @@ function WorkingWithArrays() {
     };
 
     const createTodo = async () => {
-        try {
-            const response = await axios.post(API, { title: 'Balls' }); 
-            setTodos([...todos, response.data]);
-        } catch (error) {
-            console.error(error);
-            setErrorMessage((error as any).response?.data.message);
-        }
+    const newTodo = {
+        title: "New Todo",
+        description: "Description of new todo",
+        due: "2024-01-01",
+        completed: false
     };
+    try {
+        const response = await axios.post(API, newTodo);
+        setTodos([...todos, response.data]);
+    } catch (error) {
+        console.error(error);
+        setErrorMessage((error as any).response?.data.message);
+    }
+};
+
     const updateTodo = async () => {
         try {
             const response = await axios.put(`${API}/${todo.id}`, todo);
