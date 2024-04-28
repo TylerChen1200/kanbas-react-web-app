@@ -23,8 +23,12 @@ function WorkingWithArrays() {
         setTodos(response.data);
     };
     const createTodo = async () => {
-        const response = await axios.get(`${API}/create`);
-        setTodos(response.data);
+        try {
+            const response = await axios.post(API, { title: "New Todo", description: "Description here", due: "2021-09-10", completed: false });
+            setTodos([...todos, response.data]);
+        } catch (error: any) {
+            setErrorMessage(error.message);
+        }
     };
     const fetchTodoById = async (id: number) => {
         const response = await axios.get(`${API}/${id}`);
@@ -40,10 +44,13 @@ function WorkingWithArrays() {
     };
 
     const deleteTodo = async (todo: any) => {
-        const response = await axios.delete(`${API}/${todo.id}`);
-        setTodos(todos.filter((t) => t.id !== todo.id));
-      };
-    
+        try {
+            await axios.delete(`${API}/${todo.id}`);
+            setTodos(todos.filter(t => t.id !== todo.id));
+        } catch (error : any) {
+            setErrorMessage(error.message);
+        }
+    };
     const updateTodo = async () => {
         const response = await axios.put(`${API}/${todo.id}`, todo);
         setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
@@ -58,7 +65,7 @@ function WorkingWithArrays() {
     const updateDescription = () => {
         window.open(`${API}/${todo.id}/updateDescription/${encodeURIComponent(todo.description)}`, '_blank');
     };
-
+    
     const updateCompleted = () => {
         const completedStatus = todo.completed ? 'true' : 'false';
         window.open(`${API}/${todo.id}/updateCompleted/${completedStatus}`, '_blank');
@@ -120,35 +127,32 @@ function WorkingWithArrays() {
             <button onClick={createTodo} className="btn btn-primary">
                 Create Todo
             </button>
-            <button onClick={updateTitle} className="btn btn-success">
-                Update Title
-            </button>
             <h4>Retrieving Arrays</h4>
-                        <a href={API}>Get Todos</a>
-                        <h4>Retrieving an Item from an Array by ID</h4>
+            <a href={API}>Get Todos</a>
+            <h4>Retrieving an Item from an Array by ID</h4>
 
-                        <h3>Updating an Item in an Array</h3>
-                        <button onClick={updateDescription} className="btn btn-primary">
-                            Update Description
-                        </button><br />
-                        <label>
-                            Completed:
-                            <input
-                                type="checkbox"
-                                checked={todo.completed}
-                                onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
-                            />
-                        </label><br />
-                        <button onClick={updateCompleted} className="btn btn-primary">
-                            Update Completed Status
-                        </button><br />
-                        <a href={`${API}?completed=true`} className="btn btn-primary">Get Completed Todos</a>
-                        <h3>Creating new Items in an Array</h3>
-                        <a href={`${API}/create`} className="btn btn-primary">Create Todo</a>
-                        <h3>Deleting from an Array</h3>
-                        <a href={`${API}/${todo.id}/delete`} className="btn btn-primary">
-                            Delete Todo with ID = {todo.id}
-                        </a>
+            <h3>Updating an Item in an Array</h3>
+            <button onClick={updateDescription} className="btn btn-primary">
+                Update Description
+            </button><br />
+            <label>
+                Completed:
+                <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
+                />
+            </label><br />
+            <button onClick={updateCompleted} className="btn btn-primary">
+                Update Completed Status
+            </button><br />
+            <a href={`${API}?completed=true`} className="btn btn-primary">Get Completed Todos</a>
+            <h3>Creating new Items in an Array</h3>
+            <a href={`${API}/create`} className="btn btn-primary">Create Todo</a>
+            <h3>Deleting from an Array</h3>
+            <a href={`${API}/${todo.id}/delete`} className="btn btn-primary">
+                Delete Todo with ID = {todo.id}
+            </a>
 
             <ul className="list-group">
                 {todos.map((todo) => (
@@ -158,28 +162,15 @@ function WorkingWithArrays() {
                         {todo.title}
                         <p>{todo.description}</p>
                         <p>{todo.due}</p>
-
-                        <ul>
-                            {todos.map((todo) => (
-                                <li key={todo.id}>
-                                    {todo.title}
-                                    <button onClick={() => removeTodo(todo)} className="btn btn-danger">
-                                        Remove
-                                    </button>
-                                    <button onClick={() => fetchTodoById(todo.id)} className="btn btn-warning">
-                                        Edit
-                                    </button>
-
-
-                                </li>
-                            ))}
-                        </ul>
-
-                       
+                        <button onClick={() => removeTodo(todo)} className="btn btn-danger">
+                            Remove
+                        </button>
+                        <button onClick={() => fetchTodoById(todo.id)} className="btn btn-warning">
+                            Edit
+                        </button>
                     </li>
                 ))}
             </ul>
-            
         </div>
     );
 }
