@@ -1,0 +1,99 @@
+<select id="assignment">
+  <option value="Edit">Edit</option>
+  <option selected value="SpeedGrader">Speed Grader</option>
+  <option value="Duplicate">Duplicate</option>
+  <option value="Delete">Delete</option>
+  <option value="MoveTo">Move To...</option>
+  <option value="SendTo">Send To...</option>
+  <option value="CopyTo">Copy To...</option>
+  <option value="ShareToCommons">Share To Commons</option>
+</select>
+<hr>
+<h2>Assignment Name</h2>
+<form>
+  <input type="text" id="assignment-name" name="assignment-name" value="A1" />
+</form>
+<form id="textarea">
+  <textarea cols="30" rows="5">
+    This is the assignment description.
+</textarea
+  >
+</form>
+<label>Points</label><br />
+<input type="text" value="100" id="points" /> <br />
+<label>Assignment Group</label> <br /><br />
+
+<select id="AssignmentGroup">
+  <option selected value="ASSIGNMENTS">ASSIGNMENTS</option></select
+><br /><br />
+<label>Display Grade as</label><br />
+<select id="DisplayGrade">
+  <option selected value="Percentage">Percentage</option></select
+><br /><br />
+<label>Submission Type</label><br />
+<select id="SubmissionType">
+  <option selected value="Online">Online</option></select
+><br /><br />
+<label>Online Entry Options</label><br />
+<input
+  type="checkbox"
+  value="text"
+  name="online-entry-options"
+  id="chkbox-text"
+/>
+<label for="chkbox-text">Text Entry</label> <br />
+
+<input
+  type="checkbox"
+  value="URL"
+  name="online-entry-options"
+  id="chkbox-url"
+/>
+<label for="chkbox-url">Website URL</label> <br />
+
+<input
+  type="checkbox"
+  value="MEDIA"
+  name="online-entry-options"
+  id="chkbox-media"
+/>
+<label for="chkbox-media">Media Recordings</label> <br />
+<input
+  type="checkbox"
+  value="ANNOTATION"
+  name="online-entry-options"
+  id="chkbox-annotation"
+/>
+<label for="chkbox-annotation">Student Annotation</label> <br />
+<input
+  type="checkbox"
+  value="FILE"
+  name="online-entry-options"
+  id="chkbox-file"
+/>
+<label for="chkbox-file">File Upload</label> <br />
+<br />
+<body>
+  Assign
+</body>
+<br />
+
+<label>Assign to</label> <br />
+<input
+  type="text"
+  id="assignment-name"
+  name="assignment-name"
+  value="Everyone"
+/><br />
+<br />
+
+<label>Available from</label> <br />
+<input type="date" id="text-fields-dob" value="2021-01-01" /><br />
+<br />
+
+<label>Until</label> <br />
+<input type="date" id="text-fields-dob" value="2021-01-01" /><br />
+<br />
+
+<button>Cancel</button>
+<button>Save</button>

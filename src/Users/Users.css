@@ -1,0 +1,46 @@
+.sign-container {
+  width: 300px; /* Adjust width as needed */
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Reset the padding and border of the inputs */
+.input,
+.sign-button {
+  box-sizing: border-box; /* This makes sure padding doesn't affect the total width */
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Space between inputs */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Match button text size if desired */
+}
+
+.sign-button {
+  width: calc(100% - 2px); /* Subtract border width to match input fields */
+  padding: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Optional: Adjust if you want more space above the button */
+}
+
+.sign-button:hover {
+  background-color: #0056b3; /* Darken button on hover */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
