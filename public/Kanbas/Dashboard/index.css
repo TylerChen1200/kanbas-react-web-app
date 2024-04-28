@@ -1,0 +1,50 @@
+.wd-kanbas-navigation .wd-active a,
+.wd-kanbas-navigation .wd-active .fa {
+  color: red;
+  background-color: white;
+}
+
+.wd-kanbas-navigation {
+  background-color: #333;
+  min-width: 250px;
+}
+
+.wd-kanbas-navigation a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.wd-kanbas-navigation a:hover {
+  text-decoration: none;
+}
+
+.card {
+    flex: 1 0 250px;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.card-img-top {
+  max-height: 150px;
+  object-fit: cover; 
+}
+
+.card-body a {
+  text-decoration: none;
+  color: navy;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1200px) { 
+  .row-cols-md-5 > * {
+    width: 33%;
+  }
+}
+
+@media (max-width: 770px) { 
+  .row-cols-md-5 > * {
+    width: 50%;
+  }
+}

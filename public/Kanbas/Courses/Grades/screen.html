@@ -1,0 +1,309 @@
+<table>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <head>
+          <link rel="stylesheet" href="/Kanbas/styles.css" />
+          <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+          <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+          <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+        </head>
+        <body>
+          <ul class="wd-kanbas-navigation">
+            <li><a href="http://northeastern.edu">N</a></li>
+            <li><a href="/Kanbas/Account/Profile/screen.html" class="white-text"><i class="fa fa-user white-text"></i>Account</a></li>
+            <li>
+              <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fa fa-tachometer"></i> Dashboard</a>
+            </li>
+            <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fa fa-book"></i> Courses</a> </li>
+            <li><a href="#">
+              <i class="fa fa-calendar"></i> Calendar</a></li>
+            <li><a href="#">
+              <i class="fa fa-inbox custom-size-inbox"></i>Inbox</a></li>
+            <li><a href="#"> <i class="fa fa-clock-o "></i> History</a></li>
+            <li><a href="#"> <i class="fa fa-tv"></i> Studio</a></li>
+            <li><a href="#"> <i class="fa fa-arrow-right"></i>Commons</a></li>
+            <li><a href="#"> <i class="fa fa-question custom-size-question"></i>Help</a></li>
+          </ul>
+          
+      </td>
+      <td valign="top">
+        <ul class="wd-navigation">
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+          </li>
+          <li><a href="http://piazza.com">Piazza</a></li>
+          <li><a href="#">Zoom</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li class="wd-active"><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+        </ul>
+        
+      </td>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <button>Collapse All</button>
+                <button>View Progress</button>
+                <select id="publish-all">
+                  <option selected value="publish-all">publish-all</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button>Modules</button>
+                <ul>
+                  <li>
+                    Week 0
+                    <ul>
+                      <li>
+                        Learning Objectives
+                        <ul>
+                          <li>Introduction to the course</li>
+                          <li>Learn what is Web Development</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Week 1
+                    <ul>
+                      <li>Learning Objectives</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Week 0
+                    <ul>
+                      <li>
+                        Learning Objectives
+                        <ul>
+                          <li>Introduction to the course</li>
+                          <li>Learn what is Web Development</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Week 1
+                    <ul>
+                      <li>Learning Objectives</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Week 0
+                    <ul>
+                      <li>
+                        Learning Objectives
+                        <ul>
+                          <li>Introduction to the course</li>
+                          <li>Learn what is Web Development</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Week 1
+                    <ul>
+                      <li>Learning Objectives</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <select id="gradebook">
+                  <option selected value="gradebook">Gradebook</option>
+                </select>
+                <button>Import</button>
+                <select id="export">
+                  <option selected value="Export">Gradebook</option>
+                </select>
+                <button>Config</button>
+                <h2>Student Names</h2>
+                <form>
+                  <input
+                    type="text"
+                    id="student-name"
+                    name="student-name"
+                    placeholder="Search Students"
+                  />
+                </form>
+                <h2>Assignment Names</h2>
+                <form>
+                  <input
+                    type="text"
+                    id="assignment-name"
+                    name="assignment-name"
+                    placeholder="Search Assignments"
+                  />
+                </form>
+                <button>Apply Filters</button>
+                <table border="1" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Student Name</th>
+                      <th>A1</th>
+                      <th>A2</th>
+                      <th>A3</th>
+                      <th>A4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bob</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bob-A1"
+                          name="bob-A1"
+                          placeholder="15"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bob-A2"
+                          name="bob-A2"
+                          placeholder="99"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bob-A3"
+                          name="bob-A3"
+                          placeholder="23"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bob-A4"
+                          name="bob-A4"
+                          placeholder="0"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Joe</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="joe-A1"
+                          name="joe-A1"
+                          placeholder="23"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="joe-A2"
+                          name="joe-A2"
+                          placeholder="10"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="joe-A3"
+                          name="joe-A3"
+                          placeholder="12"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="joe-A4"
+                          name="joe-A4"
+                          placeholder="0"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Win</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="win-A1"
+                          name="win-A1"
+                          placeholder="100"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="win-A2"
+                          name="win-A2"
+                          placeholder="100"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="win-A3"
+                          name="win-A3"
+                          placeholder="100"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="win-A4"
+                          name="win-A4"
+                          placeholder="0"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bruh</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bruh-A1"
+                          name="bruh-A1"
+                          placeholder="0"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bruh-A2"
+                          name="bruh-A2"
+                          placeholder="0"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bruh-A3"
+                          name="bruh-A3"
+                          placeholder="0"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          id="bruh-A4"
+                          name="bruh-A4"
+                          placeholder="0"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
